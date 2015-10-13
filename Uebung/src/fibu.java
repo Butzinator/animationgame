@@ -1,6 +1,5 @@
 
-public class fibu {
-   
+public class fibu {  
    public static void main(final String[] args) { 
        long endValue = 8; 
        String trenner = System.getProperty("line.separator"); 
