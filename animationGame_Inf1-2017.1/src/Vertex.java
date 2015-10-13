@@ -34,6 +34,9 @@ public Vertex add(double s){
 	return new Vertex(x+s,y+s);
     }
 
+public Vertex add(Vertex v){
+	return new Vertex(x+v.x,y+v.y);
+    }
 public void addMod(double s){
 	x=x+s;
 	y=y+s;

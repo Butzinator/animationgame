@@ -23,6 +23,7 @@ public class GeometricObject {
 	public GeometricObject(double width, double height){
 		this(width, height, new Vertex(0,0));
 	}
+	public GeometricObject(){this(10);}
 	
 	public GeometricObject(double w){this(w,w);}
 	
@@ -54,10 +55,19 @@ public class GeometricObject {
     public void moveTo(double x,double y){
     	moveTo(new Vertex(x,y));}
     	
-    public void move(Vertex v){moveTo(pos.add(v));
+    public void move(Vertex v){moveTo(pos.add(v));}
+    
+    public boolean equals(Object thatObject){
+    	if (thatObject instanceof GeometricObject){
+    		GeometricObject that =(GeometricObject)thatObject;
+    		
+    		return that.width==this.width&&this.height==that.height
+    				&&this.pos.equals(that.pos);
+    	}
+    	return false; 
+    	}
+    }
     
     
-    }
-    }
 
 
